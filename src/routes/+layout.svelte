@@ -1,7 +1,12 @@
+<!-- src/routes/+layout.svelte -->
 <script lang="ts">
 	import '../app.css';
-
-	let { children } = $props();
+	import Header from '$lib/components/Header/Header.svelte';
+	import LayoutWrapper from '$lib/components/LayoutWrapper.svelte';
 </script>
 
-{@render children()}
+<Header />
+
+<LayoutWrapper>
+	<slot />
+</LayoutWrapper>
