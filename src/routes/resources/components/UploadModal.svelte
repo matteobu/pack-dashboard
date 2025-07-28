@@ -38,7 +38,7 @@
 	<div
 		class="fixed inset-0 z-50 flex h-full w-full items-center justify-center overflow-y-auto bg-gray-500/50 p-4"
 	>
-		<div class="relative mx-auto w-full max-w-md rounded-lg bg-white shadow-xl">
+		<div class="relative mx-auto w-full max-w-2xl rounded-lg bg-white shadow-xl">
 			<div class="p-6">
 				<div class="mb-6 flex items-center justify-between">
 					<h3 class="text-xl font-semibold text-gray-900">Upload Resource</h3>
@@ -94,27 +94,25 @@
 						</select>
 					</div>
 
-					<div class="grid grid-cols-2 gap-4">
-						<div>
-							<select
-								bind:value={uploadForm.language}
-								class="w-full rounded-md border border-gray-300 px-4 py-3 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
-							>
-								<option value="English">English</option>
-								<option value="Spanish">Spanish</option>
-								<option value="French">French</option>
-							</select>
-						</div>
+					<div>
+						<select
+							bind:value={uploadForm.language}
+							class="w-full rounded-md border border-gray-300 px-4 py-3 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+						>
+							<option value="English">English</option>
+							<option value="Spanish">Spanish</option>
+							<option value="French">French</option>
+						</select>
+					</div>
 
-						<div>
-							<select
-								bind:value={uploadForm.provider}
-								class="w-full rounded-md border border-gray-300 px-4 py-3 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
-							>
-								<option value="Pack">Pack</option>
-								<option value="External">External</option>
-							</select>
-						</div>
+					<div>
+						<select
+							bind:value={uploadForm.provider}
+							class="w-full rounded-md border border-gray-300 px-4 py-3 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+						>
+							<option value="Pack">Pack</option>
+							<option value="External">External</option>
+						</select>
 					</div>
 
 					<div>
