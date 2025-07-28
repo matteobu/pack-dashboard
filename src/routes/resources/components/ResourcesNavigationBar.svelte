@@ -3,6 +3,8 @@
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 
+	export let mobile = false;
+
 	const tabs = [
 		{ id: 'icon', label: '', isIcon: true, href: '/resources/metrics' },
 		{ id: 'All', label: 'All', isIcon: false, href: '/resources/all' },
@@ -25,19 +27,27 @@
 	}
 </script>
 
-<nav class="flex items-center gap-8">
+<nav class={mobile ? 'flex flex-wrap items-center gap-3' : 'flex items-center gap-8'}>
 	{#each tabs as tab}
 		<button
-			class="mb-[-1px] border-b-2 px-1 py-3 text-sm font-medium {currentPath === tab.href
-				? 'border-gray-500 text-gray-600'
-				: tab.disabled
-					? 'cursor-not-allowed border-transparent text-gray-300'
-					: 'border-transparent text-gray-500 hover:text-gray-700'}"
+			class={mobile
+				? 'rounded-md px-3 py-2 text-sm font-medium transition-colors ' +
+					(currentPath === tab.href
+						? 'bg-gray-100 text-gray-700'
+						: tab.disabled
+							? 'cursor-not-allowed text-gray-300'
+							: 'text-gray-500 hover:bg-gray-50 hover:text-gray-700')
+				: 'mb-[-1px] border-b-2 px-1 py-3 text-sm font-medium ' +
+					(currentPath === tab.href
+						? 'border-gray-500 text-gray-600'
+						: tab.disabled
+							? 'cursor-not-allowed border-transparent text-gray-300'
+							: 'border-transparent text-gray-500 hover:text-gray-700')}
 			on:click={() => handleTabClick(tab)}
 			disabled={tab.disabled}
 		>
 			{#if tab.isIcon}
-				<ChartNoAxesColumn class="stroke-3" />
+				<ChartNoAxesColumn class={mobile ? 'h-4 w-4' : 'stroke-3'} />
 			{:else}
 				{tab.label}
 			{/if}
