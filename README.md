@@ -1,38 +1,177 @@
-# sv
+# Resources Dashboard
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A modern dashboard application built with SvelteKit and TypeScript, showcasing key metrics and visualizations for educational resource management.
 
-## Creating a project
+## 🚀 Quick Start
 
-If you're seeing this, you've probably already done this step. Congrats!
+### Prerequisites
 
-```sh
-# create a new project in the current directory
-npx sv create
+- Node.js 18+
+- npm or yarn
 
-# create a new project in my-app
-npx sv create my-app
+### Installation & Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/matteobu/pack-dashboard.git
+cd pack-dashboard
+
+# Install dependencies and start development server
+npm install && npm run dev
 ```
 
-## Developing
+That's it! The application will be available at `http://localhost:5173`
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## 📋 Features
 
-```sh
-npm run dev
+### Core Dashboard Components
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+- **📊 Metrics Summary**: Active users, resource utilization, completion rates, and unique access statistics
+- **📈 Interactive Charts**:
+  - Circular progress indicators (horseshoe-style) for key metrics
+  - Pie chart for resource categorization
+  - Line chart for usage trends over time
+- **📚 Resource Tables**: Most-used resources with trending indicators
+- **👥 User Access Logs**: Comprehensive table with filtering and pagination
+- **⬆️ Upload Modal**: Complete form for adding new resources
+
+### Technical Features
+
+- **🎯 TypeScript**: Fully typed application with comprehensive type definitions
+- **🎨 Chart.js Integration**: Professional charts with smooth animations
+- **📱 Responsive Design**: Mobile-friendly layout that adapts to all screen sizes
+- **🔗 Nested Routing**: Clean URL structure with `/resources/metrics` and `/resources/all` views
+- **🎛️ Interactive Filtering**: Real-time table filtering by provider and date range
+- **📦 Component Architecture**: Modular, reusable components with proper separation of concerns
+
+## 🏗️ Project Structure
+
+```
+src/
+├── lib/
+│   ├── components/
+│   │   ├── charts/           # Chart.js components
+│   │   ├── dashboard/        # Dashboard-specific components
+│   │   └── ui/              # Reusable UI components
+│   ├── data/
+│   │   └── mock/            # Mock data and API services
+│   └── types.ts             # TypeScript type definitions
+├── routes/
+│   ├── resources/
+│   │   ├── components/      # Route-specific components
+│   │   ├── metrics/         # Metrics dashboard view
+│   │   ├── all/            # All resources table view
+│   │   └── +layout.svelte  # Shared layout
+│   └── [other-routes]/     # Placeholder pages with redirects
+└── app.html
 ```
 
-## Building
+## 🎨 Design & User Experience
 
-To create a production version of your app:
+### Dashboard Views
 
-```sh
-npm run build
+- **Metrics View** (`/resources/metrics`): Primary dashboard with charts and key statistics
+- **All Resources View** (`/resources/all`): Comprehensive table of all resources with search functionality
+- **Navigation**: Tab-based navigation with visual indicators for active routes
+
+### Interactive Elements
+
+- **Upload Workflow**: Modal-based resource upload with form validation
+- **Data Filtering**: Multi-criteria filtering for user access logs
+- **Responsive Tables**: Adaptive layouts with proper truncation and scrolling
+- **Hover Effects**: Interactive feedback throughout the interface
+
+## 📊 Mock Data
+
+The application includes comprehensive mock data:
+
+- **20 Educational Resources** across 7 categories
+- **15 Users** with realistic activity patterns
+- **20 Content Access Records** with filtering capabilities
+- **Time-series Data** for usage analytics
+- **Trending Indicators** for resource popularity
+
+## 🛠️ Technology Stack
+
+- **Framework**: SvelteKit 2.0+
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Charts**: Chart.js with custom integrations
+- **Icons**: Lucide Svelte
+- **Development**: Vite, ESLint, Prettier
+
+## 🚀 Available Scripts
+
+```bash
+# Development
+npm run dev          # Start development server
+npm run dev -- --open # Start dev server and open browser
+
+# Building
+npm run build        # Build for production
+npm run preview      # Preview production build
+
+# Code Quality
+npm run check        # Type checking
+npm run check:watch  # Type checking in watch mode
+npm run lint         # ESLint
+npm run format       # Prettier formatting
 ```
 
-You can preview the production build with `npm run preview`.
+## 🔧 Development Notes
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+### Component Organization
+
+- **Route-specific components** in `src/routes/[route]/components/`
+- **Reusable components** in `src/lib/components/`
+- **Type definitions** centralized in `src/lib/types.ts`
+- **Mock data** organized by entity type in `src/lib/data/mock/`
+
+### Key Implementation Details
+
+- **Chart.js Integration**: Custom Svelte wrappers for Chart.js components
+- **State Management**: Svelte stores for complex state, local state for simple interactions
+- **Routing**: File-based routing with nested layouts for shared UI elements
+- **TypeScript**: Strict type checking with comprehensive interface definitions
+
+## 🎯 Challenge Requirements Met
+
+✅ **Dashboard with key metrics and visualizations**  
+✅ **Interactive charts** (pie, line, circular progress)  
+✅ **Resource and user access tables**  
+✅ **TypeScript implementation**  
+✅ **SvelteKit framework**  
+✅ **Chart.js integration**  
+✅ **Mock data implementation**  
+✅ **Responsive design**  
+✅ **1-2 command setup**
+
+### Bonus Features Implemented
+
+- Advanced routing with nested views
+- Real-time filtering and search
+- Professional upload workflow
+- Smooth animations and transitions
+- Mobile-first responsive design
+- Comprehensive TypeScript coverage
+
+## 📱 Browser Support
+
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
+
+## 🤝 Contributing
+
+This is a technical challenge project. For production use, consider:
+
+- Adding proper authentication
+- Implementing real API endpoints
+- Adding comprehensive testing
+- Setting up CI/CD pipelines
+- Adding error boundaries and loading states
+
+---
+
+Built with ❤️ using SvelteKit and TypeScript
