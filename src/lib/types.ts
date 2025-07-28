@@ -1,5 +1,3 @@
-// $lib/types.ts
-
 // Core User Types
 export interface User {
 	id: string;
