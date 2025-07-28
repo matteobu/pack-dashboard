@@ -15,7 +15,10 @@
 
 	function handleModalSubmit(event: { detail: unknown }) {
 		console.log(event);
-		alert('Resource Uploaded Successfully!');
+		alert(
+			'✅ Upload Complete*!\n\n*Terms and conditions apply:\n- File exists only in your heart ❤️\n- Database is powered by hopes and dreams 🌟\n- Persistence sold separately 💸\n\n(Blame the deadline, not the developer! ⏰)'
+		);
+
 		showUploadModal = false;
 	}
 </script>

@@ -6,22 +6,17 @@
 
 	const { contentAccess } = mockData;
 
-	// Filter state
 	let selectedProvider = '';
 	let dateFrom = '';
 	let dateTo = '';
 
-	// Get unique providers for dropdown
 	const providers = [...new Set(contentAccess.map((access) => access.providerType))];
 
-	// Filtered data
 	$: filteredContentAccess = contentAccess.filter((access) => {
-		// Provider filter
 		if (selectedProvider && access.providerType !== selectedProvider) {
 			return false;
 		}
 
-		// Date from filter
 		if (dateFrom) {
 			const fromDate = new SvelteDate(dateFrom);
 			if (access.openedOn < fromDate) {
@@ -29,10 +24,9 @@
 			}
 		}
 
-		// Date to filter
 		if (dateTo) {
 			const toDate = new SvelteDate(dateTo);
-			toDate.setHours(23, 59, 59, 999); // End of day
+			toDate.setHours(23, 59, 59, 999);
 			if (access.openedOn > toDate) {
 				return false;
 			}
@@ -41,17 +35,16 @@
 		return true;
 	});
 
-	// Clear filters function
 	function clearFilters() {
 		selectedProvider = '';
 		dateFrom = '';
 		dateTo = '';
 	}
 
-	// Download function (mock)
 	function handleDownload() {
-		console.log('Downloading filtered data:', filteredContentAccess);
-		alert(`Downloading ${filteredContentAccess.length} records`);
+		alert(
+			`📥 Downloading ${filteredContentAccess.length} records! 📥\n\nProgress: 100% imaginary! ✨\nFile location: Your dreams folder 💭\nFormat: Pure hopium (.hope) 🙃\n\n*No actual files were downloaded in this demo*`
+		);
 	}
 </script>
 
@@ -106,7 +99,6 @@
 	</div>
 
 	<div class="overflow-hidden">
-		<!-- Single table with scrollable tbody -->
 		<div class="overflow-x-auto">
 			<table class="min-w-full divide-y divide-gray-200">
 				<thead class="sticky top-0 z-10 bg-gray-50">
@@ -138,8 +130,6 @@
 				</thead>
 			</table>
 		</div>
-
-		<!-- Scrollable tbody container -->
 		<div class="max-h-80 overflow-y-auto">
 			<table class="min-w-full">
 				<tbody class="divide-y divide-gray-200 bg-white">

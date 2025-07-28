@@ -52,7 +52,7 @@
 		</div>
 	{/if}
 
-	<div class="hidden items-center justify-between px-6 py-4 md:flex lg:justify-around lg:px-8">
+	<div class="hidden items-center justify-between px- md:flex lg:justify-around lg:px-8">
 		<Logo />
 		<NavBar />
 		<Profile />
