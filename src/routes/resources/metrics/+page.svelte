@@ -1,9 +1,7 @@
 <script>
-	import ResourcesBottomSection from "./components/ResourcesBottomSection.svelte";
-	import ResourcesMostUsedWrapper from "./components/ResourcesMostUsedWrapper.svelte";
-	import ResourcesTopSection from "./components/ResourcesTopSection.svelte";
-
-
+	import ResourcesBottomSection from './components/ResourcesBottomSection.svelte';
+	import ResourcesMostUsedWrapper from './components/ResourcesMostUsedWrapper.svelte';
+	import ResourcesTopSection from './components/ResourcesTopSection.svelte';
 </script>
 
 <!-- Top Section: Metrics -->

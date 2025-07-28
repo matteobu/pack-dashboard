@@ -21,7 +21,7 @@ export const mockTimeSeriesData: TimeSeriesData[] = [
 	{ date: '2024-04-20', uploaded: 18, usage: 46 },
 	{ date: '2024-04-30', uploaded: 31, usage: 41 },
 
-	// May 2024 - Both recover differently  
+	// May 2024 - Both recover differently
 	{ date: '2024-05-10', uploaded: 41, usage: 38 },
 	{ date: '2024-05-20', uploaded: 58, usage: 29 },
 	{ date: '2024-05-30', uploaded: 46, usage: 55 },

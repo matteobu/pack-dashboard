@@ -44,7 +44,6 @@ That's it! The application will be available at `http://localhost:5173`
 - **🎛️ Interactive Filtering**: Real-time table filtering by provider and date range
 - **📦 Component Architecture**: Modular, reusable components with proper separation of concerns
 
-
 ## 🎨 Design & User Experience
 
 ### Dashboard Views
