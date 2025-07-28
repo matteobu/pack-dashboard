@@ -78,7 +78,7 @@
 		</div>
 
 		<div class="block w-full space-y-3 sm:hidden">
-			{#each categoryData as item (item.value)}
+			{#each categoryData as item, index (index)}
 				<div class="flex items-center justify-between rounded-md bg-gray-50 p-3">
 					<div class="flex items-center">
 						<div
@@ -93,7 +93,7 @@
 		</div>
 
 		<div class="hidden flex-1 space-y-2 sm:block">
-			{#each categoryData as item (item.value)}
+			{#each categoryData as item, index (index)}
 				<div class="flex items-center">
 					<div class="mr-3 h-3 w-3 rounded-full" style="background-color: {item.color}"></div>
 					<span class="text-sm text-gray-600">{item.percentage}% {item.category}</span>
