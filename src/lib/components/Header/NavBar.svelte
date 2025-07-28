@@ -4,13 +4,10 @@
 
 	$: currentPath = $page.url.pathname;
 
-	// Function to check if a nav item is active
 	function isActive(href: string): boolean {
 		if (href === '/resources') {
-			// For resources, check if current path starts with /resources
 			return currentPath.startsWith('/resources');
 		}
-		// For other routes, exact match
 		return currentPath === href;
 	}
 </script>
