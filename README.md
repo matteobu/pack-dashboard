@@ -44,27 +44,6 @@ That's it! The application will be available at `http://localhost:5173`
 - **🎛️ Interactive Filtering**: Real-time table filtering by provider and date range
 - **📦 Component Architecture**: Modular, reusable components with proper separation of concerns
 
-## 🏗️ Project Structure
-
-```
-src/
-├── lib/
-│   ├── components/
-│   │   ├── charts/           # Chart.js components
-│   │   ├── dashboard/        # Dashboard-specific components
-│   │   └── ui/              # Reusable UI components
-│   ├── data/
-│   │   └── mock/            # Mock data and API services
-│   └── types.ts             # TypeScript type definitions
-├── routes/
-│   ├── resources/
-│   │   ├── components/      # Route-specific components
-│   │   ├── metrics/         # Metrics dashboard view
-│   │   ├── all/            # All resources table view
-│   │   └── +layout.svelte  # Shared layout
-│   └── [other-routes]/     # Placeholder pages with redirects
-└── app.html
-```
 
 ## 🎨 Design & User Experience
 

@@ -5,7 +5,7 @@
 		getTotalUploadedResources,
 		getCompletionRateResources,
 		getUniqueAccessResources
-	} from '../../../../src/routes/resources/utils/helpers';
+	} from '../../../src/routes/resources/utils/helpers';
 
 	const { resources } = mockData;
 	const resourcesUploaded = getTotalUploadedResources(resources);

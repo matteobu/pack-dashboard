@@ -8,9 +8,9 @@
 </script>
 
 <div class="rounded-lg bg-white p-6 shadow-sm">
-	<h3 class="mb-4 text-sm font-medium  text-gray-300">{title}</h3>
+	<h3 class="mb-4 text-sm font-medium text-gray-300">{title}</h3>
 	<div class="space-y-3">
-		{#each resources as resource}
+		{#each resources as resource (resource.id)}
 			<div class="flex items-center justify-between">
 				<div class="flex-1">
 					<p class="text-sm font-medium text-gray-900 underline">{resource.title}</p>

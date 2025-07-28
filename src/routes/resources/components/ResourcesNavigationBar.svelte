@@ -28,7 +28,7 @@
 </script>
 
 <nav class={mobile ? 'flex flex-wrap items-center gap-3' : 'flex items-center gap-8'}>
-	{#each tabs as tab}
+	{#each tabs as tab (tab.id)}
 		<button
 			class={mobile
 				? 'rounded-md px-3 py-2 text-sm font-medium transition-colors ' +

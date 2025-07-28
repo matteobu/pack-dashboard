@@ -15,7 +15,7 @@
 </script>
 
 <nav class={mobile ? 'flex flex-col gap-2' : 'flex gap-8'}>
-	{#each navItems.filter((item) => item.href !== '/') as { label, href }}
+	{#each navItems.filter((item) => item.href !== '/') as { label, href } (href)}
 		<a
 			{href}
 			class={mobile

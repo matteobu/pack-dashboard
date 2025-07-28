@@ -71,16 +71,14 @@
 		Resources by category
 	</h3>
 
-	<!-- Responsive Layout -->
 	<div class="flex flex-col items-center gap-6 sm:flex-row sm:items-center">
 		<div class="flex-shrink-0">
 			<canvas bind:this={canvas} class="h-32 w-32 sm:h-40 sm:w-40" width="160" height="160"
 			></canvas>
 		</div>
 
-		<!-- Mobile Legend: Card style -->
 		<div class="block w-full space-y-3 sm:hidden">
-			{#each categoryData as item}
+			{#each categoryData as item (item.value)}
 				<div class="flex items-center justify-between rounded-md bg-gray-50 p-3">
 					<div class="flex items-center">
 						<div
@@ -94,9 +92,8 @@
 			{/each}
 		</div>
 
-		<!-- Desktop Legend: List style -->
 		<div class="hidden flex-1 space-y-2 sm:block">
-			{#each categoryData as item}
+			{#each categoryData as item (item.value)}
 				<div class="flex items-center">
 					<div class="mr-3 h-3 w-3 rounded-full" style="background-color: {item.color}"></div>
 					<span class="text-sm text-gray-600">{item.percentage}% {item.category}</span>

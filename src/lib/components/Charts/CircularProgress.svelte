@@ -1,12 +1,14 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { Chart, registerables } from 'chart.js';
+	import DOMPurify from 'dompurify';
 
 	Chart.register(...registerables);
 
 	export let percentage: number = 0;
 	export let label: string = '';
 	export let color: string = '#60A5FA';
+	const sanitizedLabel = DOMPurify.sanitize(label);
 
 	let canvas: HTMLCanvasElement;
 	let chart: Chart;
@@ -77,7 +79,9 @@
 			</div>
 		</div>
 		<h3 class="text-center text-sm font-medium text-gray-300">
-			{@html label}
+			<!-- label sanitized -->
+			<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+			{@html sanitizedLabel}
 		</h3>
 	</div>
 </div>

@@ -2,6 +2,7 @@
 	import { mockData } from '$lib/data/mock';
 	import { EllipsisVertical } from '@lucide/svelte/icons';
 	import { formatDate } from '../../utils/helpers';
+	import { SvelteDate } from 'svelte/reactivity';
 
 	const { contentAccess } = mockData;
 
@@ -11,7 +12,7 @@
 	let dateTo = '';
 
 	// Get unique providers for dropdown
-	$: providers = [...new Set(contentAccess.map((access) => access.providerType))];
+	const providers = [...new Set(contentAccess.map((access) => access.providerType))];
 
 	// Filtered data
 	$: filteredContentAccess = contentAccess.filter((access) => {
@@ -22,7 +23,7 @@
 
 		// Date from filter
 		if (dateFrom) {
-			const fromDate = new Date(dateFrom);
+			const fromDate = new SvelteDate(dateFrom);
 			if (access.openedOn < fromDate) {
 				return false;
 			}
@@ -30,7 +31,7 @@
 
 		// Date to filter
 		if (dateTo) {
-			const toDate = new Date(dateTo);
+			const toDate = new SvelteDate(dateTo);
 			toDate.setHours(23, 59, 59, 999); // End of day
 			if (access.openedOn > toDate) {
 				return false;
@@ -63,7 +64,7 @@
 				class="rounded-md border border-gray-300 px-3 py-2 text-sm"
 			>
 				<option value="">All Providers</option>
-				{#each providers as provider}
+				{#each providers as provider (provider)}
 					<option value={provider}>{provider}</option>
 				{/each}
 			</select>
@@ -142,7 +143,7 @@
 		<div class="max-h-80 overflow-y-auto">
 			<table class="min-w-full">
 				<tbody class="divide-y divide-gray-200 bg-white">
-					{#each filteredContentAccess as access}
+					{#each filteredContentAccess as access (access.id)}
 						<tr>
 							<td class="w-1/4 px-6 py-4 whitespace-nowrap">
 								<div class="flex items-center">

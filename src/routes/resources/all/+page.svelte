@@ -3,7 +3,7 @@
 
 	const { resources } = mockData;
 
-	$: sortedResources = [...resources].sort((a, b) => b.viewCountByYear - a.viewCountByYear);
+	const sortedResources = [...resources].sort((a, b) => b.viewCountByYear - a.viewCountByYear);
 
 	function formatDate(date: Date): string {
 		return date.toLocaleDateString('en-US', {
@@ -28,7 +28,6 @@
 </script>
 
 <div class="space-y-6">
-	<!-- Resources Table -->
 	<div class="rounded-lg bg-white">
 		<table class="w-full table-fixed divide-y divide-gray-200">
 			<thead class="bg-white">
@@ -54,7 +53,7 @@
 				</tr>
 			</thead>
 			<tbody class="divide-y divide-gray-200 bg-white">
-				{#each sortedResources as resource}
+				{#each sortedResources as resource (resource.id)}
 					<tr class="transition-colors hover:bg-gray-50">
 						<td class="px-6 py-4">
 							<div class="flex flex-col">

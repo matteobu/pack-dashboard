@@ -5,9 +5,8 @@
 
 	const { resources } = mockData;
 
-	$: topByYear = getMostUsedByYear(resources, 3);
-
-	$: topByMonth = getMostUsedByMonth(resources, 3);
+	const topByYear = getMostUsedByYear(resources, 3);
+	const topByMonth = getMostUsedByMonth(resources, 3);
 </script>
 
 <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">

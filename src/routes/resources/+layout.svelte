@@ -13,8 +13,8 @@
 		showUploadModal = false;
 	}
 
-	function handleModalSubmit(event: { detail: any }) {
-		console.log('Form submitted with data:', event.detail);
+	function handleModalSubmit(event: { detail: unknown }) {
+		console.log(event);
 		alert('Resource Uploaded Successfully!');
 		showUploadModal = false;
 	}

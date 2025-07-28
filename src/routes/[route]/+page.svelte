@@ -26,11 +26,6 @@
 			}
 		};
 	});
-
-	function redirectNow() {
-		clearInterval(intervalId);
-		goto('/resources');
-	}
 </script>
 
 <svelte:head>
