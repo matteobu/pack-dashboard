@@ -133,12 +133,6 @@ npm run format       # Prettier formatting
 - Mobile-first responsive design
 - Comprehensive TypeScript coverage
 
-## 📱 Browser Support
-
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
 
 ## 🤝 Contributing
 
