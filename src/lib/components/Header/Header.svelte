@@ -14,7 +14,6 @@
 </script>
 
 <header class="border-b border-gray-200 bg-white">
-	<!-- Mobile Header -->
 	<div class="flex items-center justify-between px-4 py-3 md:hidden">
 		<Logo />
 		<div class="flex items-center gap-3">
@@ -25,7 +24,6 @@
 				aria-label="Toggle menu"
 			>
 				{#if mobileMenuOpen}
-					<!-- Close icon -->
 					<svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 						<path
 							stroke-linecap="round"
@@ -35,7 +33,6 @@
 						/>
 					</svg>
 				{:else}
-					<!-- Hamburger icon -->
 					<svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 						<path
 							stroke-linecap="round"
@@ -49,14 +46,12 @@
 		</div>
 	</div>
 
-	<!-- Mobile Menu (collapsed by default) -->
 	{#if mobileMenuOpen}
 		<div class="border-t border-gray-200 bg-white px-4 py-3 md:hidden">
 			<NavBar mobile={true} />
 		</div>
 	{/if}
 
-	<!-- Desktop Header -->
 	<div class="hidden items-center justify-between px-6 py-4 md:flex lg:justify-around lg:px-8">
 		<Logo />
 		<NavBar />
