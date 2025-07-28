@@ -67,7 +67,7 @@
 </script>
 
 <div class="flex-1 rounded-lg bg-white p-6 shadow-sm">
-	<h3 class="mb-4 text-lg font-medium  text-gray-300">Resources by category</h3>
+	<h3 class="mb-4 text-md font-medium  text-gray-300">Resources by category</h3>
 	<div class="flex items-center gap-6">
 		<div class="flex-shrink-0">
 			<canvas bind:this={canvas} class="h-40 w-40" width="160" height="160"></canvas>

@@ -16,7 +16,7 @@ export const mockContentAccess: ContentAccess[] = [
 		user: mockUsers[0], // Jane Doe
 		accessedContent: 'How to stay motivated',
 		openedOn: new Date('2025-01-27T14:30:00'),
-		closedOn: undefined, // Currently accessing
+		closedOn: undefined,
 		provider: 'Pack',
 		providerType: 'Pack'
 	},
@@ -52,7 +52,7 @@ export const mockContentAccess: ContentAccess[] = [
 		user: mockUsers[4], // Dr. Lisa Martinez
 		accessedContent: 'Building Emotional Intelligence',
 		openedOn: new Date('2025-01-27T13:15:00'),
-		closedOn: undefined, // Currently accessing
+		closedOn: undefined,
 		provider: 'External',
 		providerType: 'External'
 	},
@@ -61,7 +61,7 @@ export const mockContentAccess: ContentAccess[] = [
 		user: mockUsers[5], // David Chen
 		accessedContent: 'Project Management Fundamentals',
 		openedOn: new Date('2025-01-28T09:00:00'),
-		closedOn: undefined, // Currently accessing
+		closedOn: undefined,
 		provider: 'Pack',
 		providerType: 'Pack'
 	},
@@ -79,7 +79,7 @@ export const mockContentAccess: ContentAccess[] = [
 		user: mockUsers[7], // Maria Rodriguez
 		accessedContent: 'Stress Management Techniques',
 		openedOn: new Date('2025-01-27T11:20:00'),
-		closedOn: undefined, // Currently accessing
+		closedOn: undefined,
 		provider: 'External',
 		providerType: 'External'
 	},
@@ -97,7 +97,7 @@ export const mockContentAccess: ContentAccess[] = [
 		user: mockUsers[8], // Robert Kim
 		accessedContent: 'Cross-Cultural Communication',
 		openedOn: new Date('2025-01-28T08:45:00'),
-		closedOn: undefined, // Currently accessing
+		closedOn: undefined,
 		provider: 'External',
 		providerType: 'External'
 	},
@@ -133,7 +133,7 @@ export const mockContentAccess: ContentAccess[] = [
 		user: mockUsers[12], // Michael Chang
 		accessedContent: 'Building High-Performance Teams',
 		openedOn: new Date('2025-01-24T10:00:00'),
-		closedOn: undefined, // Currently accessing
+		closedOn: undefined,
 		provider: 'Pack',
 		providerType: 'Pack'
 	},
@@ -151,7 +151,7 @@ export const mockContentAccess: ContentAccess[] = [
 		user: mockUsers[14], // Laura Johnson
 		accessedContent: 'Career Development Planning',
 		openedOn: new Date('2025-01-25T11:30:00'),
-		closedOn: undefined, // Currently accessing
+		closedOn: undefined,
 		provider: 'External',
 		providerType: 'External'
 	},
